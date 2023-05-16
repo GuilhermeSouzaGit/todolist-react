@@ -1,0 +1,29 @@
+ul {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-weight: 700;
+    margin-bottom: .4rem;
+}
+
+.task button {
+    border: 1px solid rgba(45, 112, 253, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+    padding: 1rem;
+}
+
+.activated button {
+    background: #00D8A7;
+    transition: background-color .6s ease;
+}
+
+.activated span {
+    text-decoration-line: line-through;
+    color: #8F98A8;
+}

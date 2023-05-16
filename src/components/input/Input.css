@@ -1,0 +1,36 @@
+.input-task {
+    padding: .1rem;
+    margin: 2rem 0;
+    border: 3px solid #b9b9b9;
+    border-radius: 8px;
+    width: max-content;
+    height: max-content;
+}
+
+.input-task input {
+    border: none;
+    outline: none;
+    width: 25vw;
+    padding-left: 0.6em;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+
+.input-task button {
+    border: 3px solid #2d70fd;
+    background-color: #2d70fd;
+    color: white;
+    padding: 0.8rem 2.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .1s ease-in-out;
+}
+
+.input-task button:hover {
+    color: #2d70fd;
+    background-color: transparent;
+    transform: scale(1.1);
+}
