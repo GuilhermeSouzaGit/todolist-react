@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import "./Tasks.css"
 
-const Tasks = () => {
-	const [ tasks, setTasks ] = useState([]);
+const Tasks = ({taskList}) => {
 	const [ activated, setActivated] = useState({});
 
 	function toggleClass(index) {
@@ -12,16 +11,10 @@ const Tasks = () => {
 		});
 	};
 
-	useEffect(() => {
-		const tasks = JSON.parse(localStorage.getItem("taskList"));
-		setTasks(tasks);
-	}, [tasks]);
-	
-
   	return (
 		<div className="tasks-container">
 			<ul className="tasks">
-				{tasks.map((task, index) => (
+				{taskList.map((task, index) => (
 					<li key={index} className={activated[index] ? "task activated" : "task"}  onClick={ () => toggleClass(index) } >
 						<button className="btn-task"></button>
 						<span>{task}</span>

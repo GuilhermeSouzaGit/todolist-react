@@ -2,6 +2,10 @@ ul {
     list-style: none;
 }
 
+.tasks-container {
+    height: 100%;
+}
+
 .task {
     display: flex;
     align-items: center;

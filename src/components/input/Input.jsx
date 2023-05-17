@@ -1,18 +1,17 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./Input.css";
 
-const Input = () => {
+const Input = ({setTaskList}) => {
   	const [task, setTask] = useState("");
-	const [taskList, setTaskList] = useState([])
+
   	const inputRef = useRef(null);
 
-	useEffect(() => {
-		localStorage.setItem("taskList", JSON.stringify(taskList))
-	}, [taskList])
-
-  	function createTask(e) {
-		if (!task) return;
-		setTaskList([...taskList, task]);
+  	function createTask() {
+		setTaskList((currentTask) => {
+			const newTasks = [...currentTask, task]
+			localStorage.setItem("taskList", JSON.stringify(newTasks))
+			return newTasks
+		})
 		setTask("")
 		inputRef.current.focus();
   	}
