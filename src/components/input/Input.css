@@ -1,3 +1,7 @@
+.btn-mobile {
+    display: none;
+}
+
 .input-task {
     padding: .1rem;
     margin: 2rem 0;
@@ -33,4 +37,32 @@
     color: #2d70fd;
     background-color: transparent;
     transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+    .btn-mobile {
+        display: inherit;
+    }
+    .btn-desktop {
+        display: none;
+    }
+    .input-task {
+        display: flex;
+        width: 100%;
+    }
+    .input-task input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 440px) {
+    .input-task {
+        margin: 1rem 0;
+    }
+    .input-task input {
+        font-size: .8rem;
+    }
+    .input-task button {
+        padding: .4rem 1.2rem;
+    }
 }

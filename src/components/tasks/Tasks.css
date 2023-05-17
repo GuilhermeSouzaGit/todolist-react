@@ -15,7 +15,7 @@ ul {
 }
 
 .task button {
-    border: 1px solid rgba(45, 112, 253, 0.15);
+    border: 1px solid rgba(45, 112, 253, 0.5);
     border-radius: 50%;
     cursor: pointer;
     background: none;
@@ -30,4 +30,13 @@ ul {
 .activated span {
     text-decoration-line: line-through;
     color: #8F98A8;
+}
+
+@media (max-width: 440px) {
+    .task button {
+        padding: 0.8rem;
+    }
+    span {
+        font-size: .8rem;
+    }
 }

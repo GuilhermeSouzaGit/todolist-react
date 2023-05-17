@@ -29,7 +29,8 @@ const Input = ({setTaskList}) => {
   	return (
 		<div className="input-task">
     		<input placeholder="Adicione uma tarefa" value={task} onChange={handleChange} ref={inputRef} onKeyDown={handleKeyPress} ></input>
-      		<button type="submit" onClick={ createTask }>Adicionar</button>
+      		<button type="submit" onClick={ createTask } className="btn-desktop">Adicionar</button>
+			<button type="submit" onClick={ createTask } className="btn-mobile">+</button>
     	</div>
   	);
 };
